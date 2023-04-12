@@ -1,8 +1,19 @@
 [package]
-name = "rust-library-project-template"
+name = "tui-dashboard"
 version = "0.1.0"
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Xithrius <xithrius@gmail.com>"]
+edition = "2021"
+rust-version = "1.61.0"
+description = "Dashboard widget for tui-rs/ratatui."
+documentation = "https://github.com/Xithrius/tui-dashboard"
+homepage = "https://github.com/Xithrius/tui-dashboard"
+repository = "https://github.com/Xithrius/tui-dashboard"
+license = "MIT OR Apache-2.0"
+keywords = ["tui", "twitch"]
+categories = ["command-line-utilities"]
 
 [dependencies]
+tui = { package = "ratatui", version = "0.20.1", default-features = false, features = [ "crossterm" ] }
+
+[profile.dev]
+lto = "off"
