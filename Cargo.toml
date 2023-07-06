@@ -13,7 +13,7 @@ keywords = ["tui", "twitch"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-tui = { package = "ratatui", version = "0.20.1", default-features = false, features = [ "crossterm" ] }
+tui = { package = "ratatui", version = "0.21.0", default-features = false, features = [ "crossterm", "serde" ] }
 
 [profile.dev]
 lto = "off"

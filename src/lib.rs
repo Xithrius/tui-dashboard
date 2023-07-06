@@ -1,6 +1,6 @@
 use tui::{
     style::Style,
-    text::{Spans, Text},
+    text::{Line, Text},
 };
 
 
@@ -38,7 +38,7 @@ impl<T> Section<T> {
 #[allow(dead_code)]
 #[derive(Debug, Clone)]
 pub struct TuiDashboardWidget<'a, T: Into<Text<'a>>> {
-    text: Vec<Spans<'a>>,
+    text: Vec<Line<'a>>,
     sections: Vec<Section<T>>,
 }
 
